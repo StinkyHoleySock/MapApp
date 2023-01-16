@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MapApp</string>
+    <string name="tv_title">Point №%1$s</string>
+</resources>
