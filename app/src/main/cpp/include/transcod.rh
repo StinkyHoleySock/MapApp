@@ -1,0 +1,190 @@
+/****** TRANSCOD.RH *********** Alexeev  S.A.   ****** 10/12/12 ****
+******* TRANSCOD.RH *********** Belenkov O.V.   ****** 03/03/14 ****
+******* TRANSCOD.RH *********** Shishkova L.A.  ****** 21/06/13 ****
+******* TRANSCOD.RH *********** Nefedieva O.A.  ****** 13/01/12 ****
+******* TRANSCOD.RH *********** Vitsko D.A.     ****** 11/03/13 ****
+******* TRANSCOD.RH *********** Konon V.N.      ****** 21/02/14 ****
+******* TRANSCOD.RH *********** Борзов А.Ю.     ****** 10/03/15 ****
+*                                                                  *
+*              Copyright (c) PANORAMA Group 1991-2013              *
+*                      All Rights Reserved                         *
+*                                                                  *
+********************************************************************
+*                                                                  *
+*                  FOR  WINDOWS95 & WINDOWS NT                     *
+*                                                                  *
+********************************************************************
+*                                                                  *
+*         КОДЫ ОПЕРАЦИЙ ДЛЯ ВЕДЕНИЯ ЖУРНАЛА ТРАНЗАКЦИЙ             *
+*                                                                  *
+*******************************************************************/
+
+#ifndef TRANSCOD_RH
+ #define TRANSCOD_RH // 30/09/02
+
+//==================================================================
+//        СЕКЦИЯ ПАНОРАМЫ
+//==================================================================
+
+#define TAC_PAN_NEWRSC       5000         // Изменен классификатор
+
+#define TAC_PAN_SXFUPDATE    6000         // Обновление карты из SXF
+#define TAC_PAN_TXFUPDATE    6001         // Обновление карты из TXF
+#define TAC_PAN_PSPEDIT      6002         // Обновлен паспорт карты
+#define TAC_PAN_LUAUPDATE    6003         // Обновление карты по сценарию Lua
+
+
+//==================================================================
+//        СЕКЦИЯ РЕДАКТОРА ВЕКТОРНОЙ КАРТЫ
+//==================================================================
+
+
+#define TAC_MED_CREATEOBJECT 4001         //  Создание объекта
+#define TAC_MED_UNDO         4002         //  Отмена
+#define TAC_MED_DELETEOBJECT 4003         //  Удаление объекта
+#define TAC_MED_PASTE        4004         //  Сшивка объектов
+#define TAC_MED_MOVEKNOT     4005         //  Перемещение узлов
+#define TAC_MED_MOVEPART     4006         //  Перемещение участка объекта
+#define TAC_MED_EDITPART     4007         //  Редактирование участка объекта
+#define TAC_MED_LINECUT      4008         //  Рассечение линейного объекта
+#define TAC_MED_ADJUST       4009         //  Согласование объектов
+#define TAC_MED_SPLINE       4010         //  Сглаживание объектов
+#define TAC_MED_FILTER       4011         //  Фильтрация объектов
+#define TAC_MED_REVERT       4012         //  Изменение направления
+#define TAC_MED_CUT          4013         //  Разрезание объекта
+#define TAC_MED_POLYTITLE    4014         //  Сборка сложной подписи
+#define TAC_MED_SEMAPPEND    4015         //  Добавление семантики
+#define TAC_MED_SEMUPDATE    4016         //  Обновление семантики
+#define TAC_MED_SEMDELETE    4017         //  Удаление семантики
+#define TAC_MED_ROTATE       4018         //  Вращение объекта
+#define TAC_MED_MOVE         4019         //  Перемещение объекта
+#define TAC_MED_MODIFY       4020         //  Изменение кода объекта
+#define TAC_MED_HIGHT        4021         //  Редактирование высоты
+#define TAC_MED_TITLE        4022         //  Редактирование текста
+#define TAC_MED_BOTTOP       4023         //  Изменение границ видимости
+#define TAC_MED_MOVEROTATE   4024         //  Масштабирование и поворот объектов
+
+#define TAC_MED_SCENARIO     4025         //  Создание сценария
+#define TAC_MED_SCENEOBJECT  4026         //  Создание/обновление объекта по сценарию
+#define TAC_MED_DRAWEDIT     4027         //  Редактирование графики объекта     // 05/06/03
+#define TAC_MED_COPYSEEK     4028         //  Копирование(перемещение) на другую карту  // 21/01/11
+
+#define TAC_MED_DELONESUB    4029         //  Удаление одного подобъекта                       //07/12/12
+#define TAC_MED_DELALLSUB    4030         //  Удаление всех подобъектов                        //07/12/12
+#define TAC_MED_SEEKDELALSUB 4031         //  Удаление всех подобъектов у выделенных объектов  //07/12/12
+#define TAC_MED_DELSEEK      4032         //  Удаление выделенных объектов                     //07/12/12
+#define TAC_MED_SMOVE        4033         //  Быстрое редактирование и удаление объектов       //07/12/12
+#define TAC_MED_POINTGROUP   4034         //  Редактирование общих точек смежных объектов      //07/12/12
+#define TAC_MED_DELETEPOINT  4035         //  Удаление точек                                   //07/12/12
+#define TAC_MED_ADDPOINT     4036         //  Добавление точек                                 //07/12/12
+#define TAC_MED_LOCKOBJ      4037         //  Замыкание объекта                                //07/12/12
+
+#define TAC_MED_RECTANGLE    4039         //  Приведение объектов к прямоугольному виду        //07/12/12
+#define TAC_MED_SETBEGIN     4040         //  Установить первую точку метрики                  //07/12/12
+#define TAC_MED_CHANGESEMCODE 4041        //  Изменение кода семантики                         //07/12/12
+#define TAC_MED_LISTSEM      4042         //  Редактирование семантики списком                 //07/12/12
+#define TAC_MED_CALCVALUE    4043         //  Расчёты по семантике                             //07/12/12
+#define TAC_MED_CALCSTRING   4044         //  Сборка символьной семантики                      //07/12/12
+#define TAC_MED_SET_COLOR    4045         //  Изменить цвет                                    //07/12/12
+#define TAC_MED_SET_SCALE    4046         //  Масштабирование объекта                          //07/12/12
+#define TAC_MED_COPYHIGHT    4047         //  Копия значения абсолютной высоты                 //07/12/12
+#define TAC_MED_DELETEHIGHT  4048         //  Удаление высоты                                  //07/12/12
+#define TAC_MED_COPYPART     4049         //  Копия участка объекта                            //10/12/12
+#define TAC_MED_COPYSUB      4050         //  Создание подобъекта                              //10/12/12
+#define TAC_MED_SEEKSUBJECT  4051         //  Создание подобъектов  по выделенным объектам     //10/12/12
+#define TAC_MED_CROSSPOINT   4052         //  Создание точек пересечения выбранных объектов    //10/12/12
+#define TAC_MED_ADJUSPOINT   4053         //  Согласование двух точек двух объектов            //10/12/12
+#define TAC_MED_ADJUSOBJECT  4054         //  Согласование концов (сводка) линейных объектов   //10/12/12
+#define TAC_MED_ADJLINEFRAME 4055         //  Сводка объектов по рамке                         //10/12/12
+#define TAC_MED_KNOT         4056         //  Формирование узла                                //10/12/12
+#define TAC_MED_ADJSHORTPOINT 4057        //  Согласование точек                               //10/12/12
+#define TAC_MED_CUTSET       4058         //  Вырезание списков                                //10/12/12
+#define TAC_MED_ADJSET       4059         //  Согласование списков                             //10/12/12
+#define TAC_MED_TOTALFILTR   4060         //  Согласованная фильтрация объекта                 //10/12/12
+#define TAC_MED_LINEPOINTCUT 4061         //  Рассечение в точке                               //10/12/12
+#define TAC_MED_SQARECUT     4062         //  Рассечение площадного объекта объектом           //10/12/12
+#define TAC_MED_BUILDING     4063         //  Составление кварталов                            //10/12/12
+#define TAC_MED_SEEKLINECUT  4064         //  Рассечение линейных объектов                     //10/12/12
+#define TAC_MED_EXCAVAT      4065         //  Насыпь (пропорционально)                         //10/12/12
+#define TAC_MED_EMBANKMENT   4066         //  Насыпь (перпендикулярно)                         //10/12/12
+#define TAC_MED_PLATFORM     4067         //  Создание объекта типа ЭСТАКАДА                   //10/12/12
+#define TAC_MED_STAIRS       4068         //  Оформление объекта типа ЛЕСТНИЦА                 //10/12/12
+#define TAC_MED_ZIGZAG       4069         //  Создание зигзагообразного объекта                //10/12/12
+#define TAC_MED_CREATECOPY   4070         //  Создание по типу                                 //10/12/12
+#define TAC_MED_CREATESUB    4071         //  Создание подобъекта                              //10/12/12
+#define TAC_MED_COPY         4072         //  Копия объекта                                    //10/12/12
+#define TAC_MED_CHOICEMAP    4073         //  Копия на другую карту                            //10/12/12
+#define TAC_MED_SAVEOBJECT   4074         //  Создание по условному                            //10/12/12
+#define TAC_MED_SIT_LINE     4075         //  Нанесение линии                                  //10/12/12
+#define TAC_MED_SIT_SQUARE   4076         //  Нанесение полигона                               //10/12/12
+#define TAC_MED_SIT_POINT    4077         //  Нанесение растрового знака                       //10/12/12
+#define TAC_MED_SIT_TEXT     4078         //  Нанесение подписи                                //10/12/12
+#define TAC_MED_CRMODE0      4079         //  Комбинированный метод                            //10/12/12
+#define TAC_MED_LABELLINEFROMSEM 4080     //  Подпись линии по семантике                       //10/12/12
+#define TAC_MED_LABELFROMSEM1    4081     //  Подпись объекта по семантике(произвольный контур)//10/12/12
+#define TAC_MED_LABELFROMSEM2    4082     //  Подпись объекта по семантике(сглаживающий сплайн)//10/12/12
+#define TAC_MED_LINECONTINUE 4083         //  Продолжение линии                                //10/12/12
+#define TAC_MED_PARTMOVE     4084         //  Перемещение участка                              //10/12/12
+#define TAC_MED_TITLEMOVE    4085         //  Редактирование составной подписи                 //10/12/12
+#define TAC_MED_RESTORESEEK  4086         //  Восстановление удаленных                         //10/12/12
+#define TAC_MED_SEEKCODE     4087         //  Перекодировка выделенных                         //10/12/12
+#define TAC_MED_SEEKCROSS    4088         //  Пересечение выделенных                           //10/12/12
+#define TAC_MED_SEEKSPLINE   4089         //  Сглаживание выделенных                           //10/12/12
+#define TAC_MED_SEEKFILTER   4090         //  Фильтрация выделенных                            //10/12/12
+
+#define TAC_MED_SHAB         4092         //  Нанесение из макета                              //10/12/12
+#define TAC_MED_SEEKHIGHTADD 4093         //  Обновление высоты объекта из матрицы             //10/12/12
+#define TAC_MED_HIGHTADD     4094         //  Добавление высот                                 //10/12/12
+#define TAC_MED_STAFFCREATE  4095         //  Нанесение КП                                     //10/12/12
+#define TAC_MED_BERGLINE     4096         //  Бергштрих в точке                                //10/12/12
+#define TAC_MED_DOUBLEBERGLINE 4097       //  Парные бергштрихи                                //10/12/12
+#define TAC_MED_ADDOBJECTDRAW  4098       //  Копия графики                                    //10/12/12
+#define TAC_MED_POSUPDATE      4099       //  Изменить порядок отображения объекта в цепочке   //03/03/14 
+#define TAC_MED_OUTBORDER      4100       //  Общая граница                                    //10/12/12
+#define TAC_MED_EDITLINE       4101       //  Редактирование линии
+#define TAC_MED_GENSPLINE      4102       //  Согласованное сглаживание                        //10/03/15
+#define TAC_MED_ROTATESELECTED 4199       //  Привязка выделенных объектов                     //10/12/12
+#define TAC_MED_UPDATEOBJECT   4200       //  Обновление объекта
+
+//==================================================================
+//        СЕКЦИЯ КОНТРОЛЯ ВЕКТОРНОЙ КАРТЫ                                  // 21/05/07
+//==================================================================
+
+#define TAC_CNTR_BASE                    4500                                  // 21/05/07
+#define TAC_CNTR_METRICS_STRUCT          TAC_CNTR_BASE+1         //  "Ошибка структуры метрики"
+#define TAC_CNTR_METRICS_COORDINATE      TAC_CNTR_BASE+2         //  "Ошибка в координатах метрики"
+#define TAC_CNTR_SEMANTIC_STRUCT         TAC_CNTR_BASE+3         //  "Ошибка структуры семантики"
+#define TAC_CNTR_SEMANTIC_PERMISSIBLE    TAC_CNTR_BASE+4         //  "Наличие недопустимой семантики"
+#define TAC_CNTR_SEMANTIC_REPLY          TAC_CNTR_BASE+5         //  "Наличие недопустимой(повторной) семантики"
+#define TAC_CNTR_METRICS_LOOP            TAC_CNTR_BASE+6         //  "Наличие петель в метрике"
+#define TAC_CNTR_METRICS_BELONG          TAC_CNTR_BASE+7         //  "Ошибка входимости"
+#define TAC_CNTR_METRICS_CLOSE           TAC_CNTR_BASE+8         //  "Ошибка замкнутости"
+#define TAC_CNTR_METRICS_DUPLICATEPOINT  TAC_CNTR_BASE+9         //  "Дублирование точек метрики"
+#define TAC_CNTR_METRICS_MOVETOFRAME     TAC_CNTR_BASE+10        //  "Дотягивание до рамки листа"
+#define TAC_CNTR_TITLE_STRUCT            TAC_CNTR_BASE+11        //  "Ошибка в структуре подписи или названия"
+#define TAC_CNTR_METRICS_DIRECTION       TAC_CNTR_BASE+12        //  "Ошибка направления цифрования"
+#define TAC_CNTR_METRICS_VECTOR          TAC_CNTR_BASE+13        //  "Ошибка метрики векторного объекта"
+#define TAC_CNTR_METRICS_TITLE           TAC_CNTR_BASE+14        //  "Ошибка метрики подписи"
+#define TAC_CNTR_METRICS_3D              TAC_CNTR_BASE+15        //  "Редактирование Z координаты"
+#define TAC_CNTR_HYDROAGREE              TAC_CNTR_BASE+16        //  "Согласование объектов гидрографии"
+#define TAC_CNTR_FRAMEEDIT               TAC_CNTR_BASE+17        //  "Редактирование рамки листа"
+#define TAC_CNTR_OBJECT_DUPLICATEBASEKEY TAC_CNTR_BASE+18        //  "Повторный номер объекта"
+#define TAC_CNTR_WATERCOURSE             TAC_CNTR_BASE+19        //  "Ошибка направления линий водотока"
+#define TAC_CNTR_CONTOUROVERLAP          TAC_CNTR_BASE+20        //  "Совпадение участков контуров"
+
+//==================================================================
+//        СЕКЦИЯ СЕРВЕРА OGC WFS-T (GIS WebFeatureService)                    // 13/01/12
+//==================================================================
+
+#define TAC_WFS_CREATEOBJECT             4600                    //  Создание объекта
+#define TAC_WFS_DELETEOBJECT             4601                    //  Удаление объекта
+#define TAC_WFS_UPDATEOBJECT             4602                    //  Обновление объекта
+#define TAC_WFS_REPLACEOBJECT            4603                    //  Замена существующего объекта
+
+//==================================================================
+//        СЕКЦИЯ СЕРВИСА ВЗАИМОДЕЙСТВИЯ С ПРОСТРАНСТВЕННЫМИ БД                // 11/03/13
+//==================================================================
+
+#define TAC_DBM_UPDATE_FROM_POSTGIS      4700
+
+#endif

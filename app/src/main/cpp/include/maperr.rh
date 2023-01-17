@@ -1,0 +1,103 @@
+/****** MAPERR.RH ***************  Belenkov O.V. ****** 28/07/16 ***
+*                                                                  *
+*              Copyright (c) PANORAMA Group 1991-2016              *
+*                      All Rights Reserved                         *
+*                                                                  *
+********************************************************************
+*                                                                  *
+*                     FOR WINDOWS & LINUX                          *
+*                                                                  *
+********************************************************************
+*                                                                  *
+*        οπισαξιε ιδεξτιζιλατοςοχ σοοβύεξικ δμρ mapErrorMessage    *
+*                                                                  *
+*******************************************************************/
+
+#if !defined(MAPERROR_RH)
+#define MAPERROR_RH
+#define MAPERR_RH
+
+// --------------------------------------------------------------
+//  ιδεξτιζιλατοςω οϋιβολ οβςαβοτλι όμελτςοξξοκ λαςτω
+// --------------------------------------------------------------
+
+#define IDS_OK                   1  // ξετ οϋιβολ
+#define IDS_MEM_ALLOC        60001  // οϋιβλα χωδεμεξιρ πανρτι
+#define IDS_MEMORY           60001  // οϋιβλα χωδεμεξιρ πανρτι
+#define IDS_DISK_ALLOC       60002  // ξετ νεστα ξα δισλε
+#define IDS_READ             60003  // οϋιβλα ώτεξιρ ζακμα
+#define IDS_WRITE            60004  // οϋιβλα πςι ϊαπισι ξα δισλ
+#define IDS_STRUCT           60005  // οϋιβλα στςυλτυςω δαξξωθ
+#define IDS_OPEN             60006  // οϋιβλα οτλςωτιρ ζακμα
+#define IDS_FILE_NOT_FOUND   60007  // ζακμ ξε ξακδεξ
+#define IDS_PATH_NOT_FOUND   60008  // πυτψ ξε ξακδεξ
+#define IDS_FILE_EXIST       60009  // ζακμ υφε συύεστχυετ
+#define IDS_CLOSE            60010  // οϋιβλα ϊαλςωτιρ ζακμα
+#define IDS_CREATE           60011  // οϋιβλα σοϊδαξιρ ζακμα
+#define IDS_CREATEOLD        600011 // οϋιβλα σοϊδαξιρ ζακμα
+#define IDS_LOCK             60012  // ζακμ ϊαξρτ σμιϋλον δομηο
+#define IDS_WAIT             60013  // οπεςαγιρ ξε νοφετ βωτψ χωπομξεξα χ δαξξωκ νονεξτ
+#define IDS_CREATEDIALOG     60014  // οϋιβλα πςι χωϊοχε διαμοηα
+#define IDS_DOERROR          60015  // οϋιβλα πςι χωώισμεξιρθ
+#define IDS_RSCOPEN          60016  // οϋιβλα οτλςωτιρ ζακμα RSC
+
+#define IDS_FILE_MANY        60020  // σμιϋλον νξοηο οτλςωτωθ ζακμοχ
+#define IDS_SOCKETERROR      60021  // οϋιβλα πεςεδαώι δαξξωθ ώεςεϊ σολετ
+#define IDS_OLD_VERSION      60030  // υσταςεχϋαρ χεςσιρ δαξξωθ
+#define IDS_MODULE           60031  // ξεσοχπαδεξιε χεςσιι MAPACCES.DLL
+#define IDS_SERVERVERSION    60032  // υσταςεχϋαρ χεςσιρ σεςχεςα, λοναξδα ξε ποδδεςφιχαετσρ
+#define IDS_PARM             60040  // οϋιβλα χθοδξωθ παςανετςοχ
+#define IDS_ACCESS           60050  // ξετ πςαχ δοστυπα
+#define IDS_COPYRIGHT        60060  // ξετ πςαχ λοπιςοχαξιρ
+
+#define IDS_PROJECTTYPE      60100  // οϋιβοώξωκ τιπ πςοελγιι
+#define IDS_PROJECTPARM      60101  // οϋιβοώξωε δαξξωε ο πςοελγιι
+
+#define IDS_OUTSIDE          60102  // οβÿελτ ϊα πςεδεμανι ςακοξα
+#define IDS_APPENDOBJECT     60103  // οϋιβλα πςι δοβαχμεξιι οβÿελτα
+#define IDS_RSCSTYLE         60104  // οϋιβλα σοστορξιρ λμασσιζιλατοςα
+#define IDS_NOTFIND          60105  // λοδ/ϊξαώεξιε ξε ξακδεξο
+#define IDS_CANCEL           60106  // πςιξυδιτεμψξοε ϊαχεςϋεξιε ςαβοτω
+#define IDS_LOADLIBRARY      60107  // οϋιβλα ϊαηςυϊλι βιβμιοτελι
+#define IDS_ENTRYLIBRARY     60108  // οϋιβλα ποισλα τοώλι χθοδα
+#define IDS_POINTLIMIT       60109  // ώισμο τοώελ βομψϋε δοπυστινοηο
+
+#define IDS_DATANOCROSS      60110  // νετςιλα οβÿελτοχ ξε πεςεσελαετσρ
+#define IDS_DATANOADJUST     60111  // νετςιλα ισθοδξοηο οβÿελτα ξεϊανλξυτα
+#define IDS_DATARESULTLIMIT  60112  // ώισμο τοώελ οβÿελτα-ςεϊυμψτατα βομψϋε δοπυστινοηο
+#define IDS_DATARESULTERROR  60113  // νετςιλα ςεϊυμψτιςυΰύεηο οβÿελτα οϋιβοώξα
+
+// -------------------------------------------------------------------
+//  ιδεξτιζιλατοςω οϋιβολ οβςαβοτλι λμασσιζιλατοςα όμελτςοξξοκ λαςτω
+//              Σ 60200  ΠΟ 60299
+// --------------------------------------------------------------------
+#define IDS_RSCAPPENDEXISTOBJECT  60200  // ποπωτλα δοβαχιτψ ινεΰύικσρ οβÿελτ
+#define IDS_RSCAPPENDOBJECTERROR  60201  // οϋιβλα πςι δοβαχμεξιι οβÿελτα
+#define IDS_RSCSTRUCTOBJECTERROR  60202  // οϋιβλα στςυλτυςω οβÿελτα
+#define IDS_RSCEXITSEGMENTERROR   60203  // ποπωτλα ϊαπισατψ ποχτοςξοε ινρ σμορ
+#define IDS_RSCEXITSEMANTICERROR  60204  // ποπωτλα ϊαπισατψ ποχτοςξοε ινρ σεναξτιλι
+#define IDS_RSCSEMANTICCODEERROR  60205  // ποπωτλα ϊαπισατψ ποχτοςξοε ινρ σμορ
+#define IDS_RSCSEMANTICCODECHANGE 60206  // ξεμψϊρ ιϊνεξρτψ λοδ σεναξτιλι,οξα οβρ-
+                                         // ϊατεμψξα δμρ οβÿελτοχ μιβο χμιρετ ξα
+                                         // χιδ
+#define IDS_RSCSEMANTICCODEREPLY  60207  // ποχτοςξωκ λοδ σεναξτιλι
+#define IDS_RSCSEMANTICTYPECHANGE 60208  // ξεμψϊρ ιϊνεξρτψ τιπ - σεναξτιλα χμιρετ
+                                         // ξα χιδ οβÿελτοχ
+#define IDS_RSCSEMANTICREPLYCHANGE 60209 // ξεμψϊρ ιϊνεξρτψ ποχτοςρενοστψ - σεναξτιλα
+                                         // χμιρετ ξα χιδ οβÿελτοχ
+#define IDS_RSCSEMANTICDEFCHANGE   60210 // ξε σοημασοχαξξωε υνομώαξιρ
+
+// οϋιβλι πςι χωώισμεξιι ζοςνυμ
+#define IDS_FORMULESYNTAX          60220 // οϋιβοώξωκ σιξταλσισ
+#define IDS_FORMULESEMERROR        60221 // οϋιβλα ϊαπισι σεναξτιλι 
+#define IDS_FORMULEBRACKETERROR    60222 // ξεσοοτχετστχιε σλοβολ
+#define IDS_FORMULESIZEERROR       60223 // σμιϋλον βομψϋαρ ζοςνυμα 
+#define IDS_FORMULECALCERROR       60224 // οϋιβλα πςι χωώισμεξιρθ
+#define IDS_FORMULENAMEREPLY       60225 // ποχτοςξοε ινρ ζοςνυμω
+
+
+#define IDS_SENDERROR              60301 // οϋιβλα πεςεδαώι δαξξωθ ώεςεϊ σολετω
+#define IDS_RECVERROR              60302 // οϋιβλα πςιενα δαξξωθ ώεςεϊ σολετω
+
+
+#endif
